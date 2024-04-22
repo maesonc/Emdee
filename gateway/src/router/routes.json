@@ -1,0 +1,12 @@
+[
+{
+	"url":"/user",
+	"service":"user",
+	"auth":"auth.user_auth",
+	"proxy":{
+		"target":"localhost:8001",
+		"changeOrigin":"true"
+	}
+}
+]
+
