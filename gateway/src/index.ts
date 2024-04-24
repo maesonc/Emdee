@@ -7,6 +7,8 @@ import cors from 'cors';
 import router from './router';
 
 const app = express();
+const PORT = 8000;
+
 app.use(cors({
 	credentials: true
 }))
@@ -15,8 +17,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 const server = http.createServer(app);
-server.listen(8888,()=>{
-	console.log("Server running on http://localhost:8888");
+server.listen(PORT,()=>{
+	console.log("Server running on http://localhost:"+PORT);
 })
 
 app.use('/',router());
